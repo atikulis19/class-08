@@ -1,0 +1,171 @@
+/* common css start */
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    width: 1170px;
+    margin: auto;
+}
+.row{
+    display: flex;
+}
+
+/* common css end */
+
+
+/*navber section start */
+
+#navber{
+    background-color: #02918c;
+}
+
+#navber .row{
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+#navber .container .row ul{
+    display: flex;
+}
+
+#navber .container .row ul li{
+    position: relative;
+}
+
+#navber .container .row ul li a{
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 25px 25px;
+    display: inline-block;
+    transition: 0.8s;
+}
+
+#navber .container .row ul li a:hover{
+    background-color: #036e6b;
+    color: #cfc91d;
+}
+
+/*dropdown menu effect start */
+
+#navber .container .row ul li ul{
+    display: initial;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 200px;
+    background-color: #02918a95;
+    border-top: 3px solid #cfc91d;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.8s;
+    transform: scaleY(0);
+    transform-origin: top;
+    z-index: 2;
+}
+
+#navber .container .row ul li:hover ul{
+    opacity: 1;
+    visibility: visible;
+    transform: scaleY(1);
+}
+
+#navber .container .row ul li ul li .dropdownmenu{
+    color: white;
+    background-color: transparent;
+    padding: 15px 15px;
+}
+
+#navber .container .row ul li ul li{
+    transition: 0.5s;
+}
+#navber .container .row ul li ul li:hover{
+    background-color: #02918c;
+}
+/*dropdown menu effect end */
+/*navber section end */
+
+/* Banner Section Css Start */
+#banner{
+    height: 728px;
+    background-image: url(../img/bgimg.jpg);
+    /* opacity: 34%; */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+#banner::after{
+    content: '';
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.564);
+    /* background-image: linear-gradient(36deg, to right, #02918c, #cfc91d);
+    background-blend-mode: color-burn; */
+    z-index: -1;
+    inset: 0;
+}
+
+#banner .container{
+    height: 100%;
+}
+
+#banner .row{
+   height: 100%;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   color: white;
+}
+
+#banner .row h4{
+    font-size: 30px;
+    font-weight: 400;
+}
+
+#banner .row h1{
+    font-size: 68px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 30px;
+    
+}
+
+#banner .row p{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+#banner .row img{
+    display: block;
+    margin: 52px auto;
+}
+
+#banner .row a{
+    padding: 19px 42px;
+    color: #0b1016;
+    background-color: #cfc91d;
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+/* Banner section end */
